@@ -5,7 +5,7 @@
   <link href="/myBlog/atom.xml" rel="self"/>
   
   <link href="https://github.com/xyygit/myBlog.git/myBlog/"/>
-  <updated>2017-06-27T02:51:18.636Z</updated>
+  <updated>2017-06-28T09:48:17.804Z</updated>
   <id>https://github.com/xyygit/myBlog.git/myBlog/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://github.com/xyygit/myBlog.git/myBlog/2017/06/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
     <id>https://github.com/xyygit/myBlog.git/myBlog/2017/06/22/我的第一篇博客/</id>
     <published>2017-06-22T01:50:00.000Z</published>
-    <updated>2017-06-27T02:51:18.636Z</updated>
+    <updated>2017-06-28T09:48:17.804Z</updated>
     
     <content type="html"><![CDATA[<p>您好！欢迎来到我的个人技术博客。</p>
 ]]></content>
@@ -48,7 +48,7 @@
     <link href="https://github.com/xyygit/myBlog.git/myBlog/2017/06/22/hello-world/"/>
     <id>https://github.com/xyygit/myBlog.git/myBlog/2017/06/22/hello-world/</id>
     <published>2017-06-22T01:05:59.029Z</published>
-    <updated>2017-06-27T02:51:50.961Z</updated>
+    <updated>2017-06-28T09:48:17.800Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
