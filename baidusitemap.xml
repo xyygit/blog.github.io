@@ -7,7 +7,7 @@
     
     
   <url>
-    <loc>http://www.yann1024.cn/myBlog/2017/06/22/hello-world/</loc>
+    <loc>http://www.yann1024.cn/myBlog/myBlog/2017/06/22/hello-world/</loc>
     <lastmod>2017-06-27T02:51:50.961Z</lastmod>
     <data>
         <display>
@@ -23,7 +23,7 @@
          
            
              
-              <breadCrumb title="hello world" url="http://www.yann1024.cn/myBlog/categories/hello-world/"/>
+              <breadCrumb title="hello world" url="http://www.yann1024.cn/myBlog/myBlog/categories/hello-world/"/>
           
         </display>
     </data>
@@ -31,7 +31,7 @@
 
     
   <url>
-    <loc>http://www.yann1024.cn/myBlog/2017/06/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>http://www.yann1024.cn/myBlog/myBlog/2017/06/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-06-27T02:51:18.636Z</lastmod>
     <data>
         <display>
@@ -47,7 +47,7 @@
          
            
              
-              <breadCrumb title="搭建博客" url="http://www.yann1024.cn/myBlog/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+              <breadCrumb title="搭建博客" url="http://www.yann1024.cn/myBlog/myBlog/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
           
         </display>
     </data>
