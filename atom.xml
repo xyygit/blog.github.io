@@ -4,9 +4,9 @@
   <subtitle>风华是一指流沙，苍老是一段年华!</subtitle>
   <link href="/myBlog/atom.xml" rel="self"/>
   
-  <link href="yann1024.cn/"/>
+  <link href="http://www.yann1024.cn/"/>
   <updated>2017-06-27T02:51:18.636Z</updated>
-  <id>yann1024.cn/</id>
+  <id>http://www.yann1024.cn/</id>
   
   <author>
     <name>生如夏花</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>我的第一篇博客</title>
-    <link href="yann1024.cn/2017/06/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>yann1024.cn/2017/06/22/我的第一篇博客/</id>
+    <link href="http://www.yann1024.cn/2017/06/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://www.yann1024.cn/2017/06/22/我的第一篇博客/</id>
     <published>2017-06-22T01:50:00.000Z</published>
     <updated>2017-06-27T02:51:18.636Z</updated>
     
@@ -32,21 +32,21 @@
     
     </summary>
     
-      <category term="搭建博客" scheme="yann1024.cn/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+      <category term="搭建博客" scheme="http://www.yann1024.cn/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="npm" scheme="yann1024.cn/tags/npm/"/>
+      <category term="npm" scheme="http://www.yann1024.cn/tags/npm/"/>
     
-      <category term="hexo" scheme="yann1024.cn/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.yann1024.cn/tags/hexo/"/>
     
-      <category term="github" scheme="yann1024.cn/tags/github/"/>
+      <category term="github" scheme="http://www.yann1024.cn/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="yann1024.cn/2017/06/22/hello-world/"/>
-    <id>yann1024.cn/2017/06/22/hello-world/</id>
+    <link href="http://www.yann1024.cn/2017/06/22/hello-world/"/>
+    <id>http://www.yann1024.cn/2017/06/22/hello-world/</id>
     <published>2017-06-22T01:05:59.029Z</published>
     <updated>2017-06-27T02:51:50.961Z</updated>
     
@@ -67,14 +67,14 @@
     
     </summary>
     
-      <category term="hello world" scheme="yann1024.cn/categories/hello-world/"/>
+      <category term="hello world" scheme="http://www.yann1024.cn/categories/hello-world/"/>
     
     
-      <category term="npm" scheme="yann1024.cn/tags/npm/"/>
+      <category term="npm" scheme="http://www.yann1024.cn/tags/npm/"/>
     
-      <category term="hexo" scheme="yann1024.cn/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.yann1024.cn/tags/hexo/"/>
     
-      <category term="github" scheme="yann1024.cn/tags/github/"/>
+      <category term="github" scheme="http://www.yann1024.cn/tags/github/"/>
     
   </entry>
   
