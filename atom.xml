@@ -5,7 +5,7 @@
   <link href="/myBlog/atom.xml" rel="self"/>
   
   <link href="https://github.com/xyygit/myBlog.git/myBlog/"/>
-  <updated>2017-06-28T09:48:17.804Z</updated>
+  <updated>2017-06-29T03:16:20.414Z</updated>
   <id>https://github.com/xyygit/myBlog.git/myBlog/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>android点击输入框以外的区域，隐藏软键盘</title>
+    <link href="https://github.com/xyygit/myBlog.git/myBlog/2017/06/29/%E9%9A%90%E8%97%8F%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    <id>https://github.com/xyygit/myBlog.git/myBlog/2017/06/29/隐藏输入法/</id>
+    <published>2017-06-29T03:03:38.000Z</published>
+    <updated>2017-06-29T03:16:20.414Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="android点击输入框以外的区域，隐藏软键盘"><a href="#android点击输入框以外的区域，隐藏软键盘" class="headerlink" title="android点击输入框以外的区域，隐藏软键盘"></a>android点击输入框以外的区域，隐藏软键盘</h1><h2 id="首先设置拦截器，监听点击事件"><a href="#首先设置拦截器，监听点击事件" class="headerlink" title="首先设置拦截器，监听点击事件"></a>首先设置拦截器，监听点击事件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">dispatchTouchEvent</span><span class="params">(MotionEvent ev)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (ev.getAction() == MotionEvent.ACTION_DOWN) &#123;</div><div class="line">        View v = getCurrentFocus();</div><div class="line">        <span class="keyword">if</span> (isShouldHideKeyboard(v, ev)) &#123;</div><div class="line">            hideKeyboard(v.getWindowToken());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.dispatchTouchEvent(ev);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏"><a href="#根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏" class="headerlink" title="根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏"></a>根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isShouldHideKeyboard</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (v != <span class="keyword">null</span> &amp;&amp; (v <span class="keyword">instanceof</span> EditText)) &#123;</div><div class="line">    <span class="keyword">int</span>[] l = &#123;<span class="number">0</span>, <span class="number">0</span>&#125;;</div><div class="line">    </div><div class="line">    v.getLocationInWindow(l);</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> left = l[<span class="number">0</span>];</div><div class="line">    <span class="keyword">int</span> top = l[<span class="number">1</span>];</div><div class="line">    <span class="keyword">int</span> bottom = top + v.getHeight();</div><div class="line">    <span class="keyword">int</span> right = left + v.getWidth();</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (event.getX() &gt; left &amp;&amp; event.getX() &lt; right &amp;&amp; event.getY() &gt; top &amp;&amp; event.getY() &lt; bottom) &#123;</div><div class="line">        <span class="comment">// 点击EditText的事件，忽略它。</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">    <span class="comment">// 如果焦点不是EditText则忽略，这个发生在视图刚绘制完，第一个焦点不在EditText上，和用户用轨迹球选择其他的焦点</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="隐藏输入法"><a href="#隐藏输入法" class="headerlink" title="隐藏输入法"></a>隐藏输入法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">hideKeyboard</span><span class="params">(IBinder token)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (token != <span class="keyword">null</span>) &#123;</div><div class="line">        InputMethodManager im = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);</div><div class="line">        im.hideSoftInputFromWindow(token, InputMethodManager.HIDE_NOT_ALWAYS);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>感谢您花费时间阅读！</p>
+<p>作者 [@yann]<br>2017 年 06月 28日   </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;android点击输入框以外的区域，隐藏软键盘&quot;&gt;&lt;a href=&quot;#android点击输入框以外的区域，隐藏软键盘&quot; class=&quot;headerlink&quot; title=&quot;android点击输入框以外的区域，隐藏软键盘&quot;&gt;&lt;/a&gt;android点击输入框以外的区域
+    
+    </summary>
+    
+      <category term="Android" scheme="https://github.com/xyygit/myBlog.git/myBlog/categories/Android/"/>
+    
+    
+      <category term="android" scheme="https://github.com/xyygit/myBlog.git/myBlog/tags/android/"/>
+    
+      <category term="输入法" scheme="https://github.com/xyygit/myBlog.git/myBlog/tags/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>我的第一篇博客</title>

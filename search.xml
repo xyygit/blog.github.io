@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[android点击输入框以外的区域，隐藏软键盘]]></title>
+    <url>%2FmyBlog%2F2017%2F06%2F29%2F%E9%9A%90%E8%97%8F%E8%BE%93%E5%85%A5%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[android点击输入框以外的区域，隐藏软键盘首先设置拦截器，监听点击事件12345678910public boolean dispatchTouchEvent(MotionEvent ev) &#123; if (ev.getAction() == MotionEvent.ACTION_DOWN) &#123; View v = getCurrentFocus(); if (isShouldHideKeyboard(v, ev)) &#123; hideKeyboard(v.getWindowToken()); &#125; &#125; return super.dispatchTouchEvent(ev);&#125; 根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏12345678910111213141516171819202122private boolean isShouldHideKeyboard(View v, MotionEvent event) &#123; if (v != null &amp;&amp; (v instanceof EditText)) &#123; int[] l = &#123;0, 0&#125;; v.getLocationInWindow(l); int left = l[0]; int top = l[1]; int bottom = top + v.getHeight(); int right = left + v.getWidth(); if (event.getX() &gt; left &amp;&amp; event.getX() &lt; right &amp;&amp; event.getY() &gt; top &amp;&amp; event.getY() &lt; bottom) &#123; // 点击EditText的事件，忽略它。 return false; &#125; else &#123; return true; &#125;&#125; // 如果焦点不是EditText则忽略，这个发生在视图刚绘制完，第一个焦点不在EditText上，和用户用轨迹球选择其他的焦点 return false;&#125; 隐藏输入法123456private void hideKeyboard(IBinder token) &#123; if (token != null) &#123; InputMethodManager im = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE); im.hideSoftInputFromWindow(token, InputMethodManager.HIDE_NOT_ALWAYS); &#125;&#125; 感谢您花费时间阅读！ 作者 [@yann]2017 年 06月 28日]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>输入法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的第一篇博客]]></title>
     <url>%2FmyBlog%2F2017%2F06%2F22%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[您好！欢迎来到我的个人技术博客。]]></content>
