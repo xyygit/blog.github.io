@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[android默认弹出软件盘]]></title>
     <url>%2FmyBlog%2F2017%2F07%2F07%2F%E9%BB%98%E8%AE%A4%E5%BC%B9%E5%87%BA%E8%BD%AF%E4%BB%B6%E7%9B%98%2F</url>
-    <content type="text"><![CDATA[记录一种简单的方法进入某个页面时自动弹出软键盘、、、 android 、、、]]></content>
+    <content type="text"><![CDATA[记录一种简单的方法进入某个页面时自动弹出软键盘12345&lt;!-- 忘记密码页 --&gt; &lt;activity android:name=&quot;.account.activity.ForgetPwdActivity&quot; android:screenOrientation=&quot;portrait&quot; android:windowSoftInputMode=&quot;stateVisible&quot;/&gt;]]></content>
       <categories>
         <category>Android</category>
       </categories>
