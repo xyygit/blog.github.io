@@ -5,7 +5,7 @@
   <link href="/myBlog/atom.xml" rel="self"/>
   
   <link href="https://github.com/xyygit/myBlog.git/myBlog/"/>
-  <updated>2017-07-07T10:14:23.315Z</updated>
+  <updated>2017-07-07T10:16:48.926Z</updated>
   <id>https://github.com/xyygit/myBlog.git/myBlog/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="https://github.com/xyygit/myBlog.git/myBlog/2017/07/07/%E9%BB%98%E8%AE%A4%E5%BC%B9%E5%87%BA%E8%BD%AF%E4%BB%B6%E7%9B%98/"/>
     <id>https://github.com/xyygit/myBlog.git/myBlog/2017/07/07/默认弹出软件盘/</id>
     <published>2017-07-07T10:03:36.000Z</published>
-    <updated>2017-07-07T10:14:23.315Z</updated>
+    <updated>2017-07-07T10:16:48.926Z</updated>
     
-    <content type="html"><![CDATA[<p>记录一种简单的方法进入某个页面时自动弹出软键盘<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 忘记密码页 --&gt;</div><div class="line">       &lt;activity</div><div class="line">           android:name=&quot;.account.activity.ForgetPwdActivity&quot;</div><div class="line">           android:screenOrientation=&quot;portrait&quot;</div><div class="line">           android:windowSoftInputMode=&quot;stateVisible&quot;/&gt;</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<p>记录一种简单的方法进入某个页面时自动弹出软键盘<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 忘记密码页 --&gt;</div><div class="line">       &lt;activity</div><div class="line">           android:name=<span class="string">".account.activity.ForgetPwdActivity"</span></div><div class="line">           android:screenOrientation=<span class="string">"portrait"</span></div><div class="line">           android:windowSoftInputMode=<span class="string">"stateVisible"</span>/&gt;</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;记录一种简单的方法进入某个页面时自动弹出软键盘&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;
+      &lt;p&gt;记录一种简单的方法进入某个页面时自动弹出软键盘&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2
     
     </summary>
     
